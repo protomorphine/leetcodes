@@ -15,6 +15,12 @@ namespace tasks {
 /// @return indices of nums elements
 std::vector<int> TwoSum(const std::vector<int>& nums, int target);
 
+/// @brief is given int is palindrome (for example: 121)
+/// @a https://leetcode.com/problems/palindrome-number/
+/// @param[in] x integer
+/// @return true - if x is palindrome, otherwise - false
+bool IsPalindrome(int x);
+
 }  // namespace tasks
 
 #endif  // LEETCODES_TASKS_H

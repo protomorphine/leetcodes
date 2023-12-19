@@ -16,6 +16,8 @@ add_executable(
         src/tasks/tasks.h
         src/two_sum.cpp
         test/two_sum_test.cpp
+        test/is_palindrome_test.cpp
+        src/is_palindrome.cpp
 )
 
 target_link_libraries(
