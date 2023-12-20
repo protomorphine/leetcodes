@@ -5,6 +5,7 @@
 #ifndef LEETCODES_TASKS_H
 #define LEETCODES_TASKS_H
 
+#include <string>
 #include <vector>
 namespace tasks {
 
@@ -20,6 +21,8 @@ std::vector<int> TwoSum(const std::vector<int>& nums, int target);
 /// @param[in] x integer
 /// @return true - if x is palindrome, otherwise - false
 bool IsPalindrome(int x);
+
+int MyAtoi(std::string& s);
 
 }  // namespace tasks
 

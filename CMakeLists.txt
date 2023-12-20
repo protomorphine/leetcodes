@@ -18,6 +18,8 @@ add_executable(
         test/two_sum_test.cpp
         test/is_palindrome_test.cpp
         src/is_palindrome.cpp
+        src/string_to_integer.cpp
+        test/string_to_integer_test.cpp
 )
 
 target_link_libraries(
