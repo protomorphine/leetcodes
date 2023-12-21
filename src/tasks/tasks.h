@@ -24,6 +24,8 @@ bool IsPalindrome(int x);
 
 int MyAtoi(std::string& s);
 
+std::vector<std::string> LetterCombinations(const std::string& digits);
+
 }  // namespace tasks
 
 #endif  // LEETCODES_TASKS_H

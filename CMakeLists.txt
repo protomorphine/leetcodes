@@ -10,16 +10,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(cmake/fetch_google_test.cmake)
 
-add_executable(
-        leetcodes
-        main.cpp
+add_executable(leetcodes main.cpp
         src/tasks/tasks.h
         src/two_sum.cpp
         test/two_sum_test.cpp
-        test/is_palindrome_test.cpp
         src/is_palindrome.cpp
+        test/is_palindrome_test.cpp
         src/string_to_integer.cpp
         test/string_to_integer_test.cpp
+        src/letter_combination.cpp
+        test/letter_combination_test.cpp
 )
 
 target_link_libraries(
