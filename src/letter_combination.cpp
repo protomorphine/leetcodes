@@ -27,12 +27,8 @@ std::vector<std::string> tasks::LetterCombinations(const std::string& digits){
     for (auto const& letters = map.at(digits[0]); const auto& letter : letters) {
         std::vector<std::string> others = LetterCombinations(digits.substr(1));
 
-        std::ranges::transform(
-            others.begin(),others.end(),
-            std::back_inserter(res),
-            [&letter](std::string const& other){
-                return letter + other;
-            });
+        std::ranges::transform(others.begin(),others.end(),
+            std::back_inserter(res),[&letter](std::string const& other){ return letter + other; });
     }
 
     return res;
