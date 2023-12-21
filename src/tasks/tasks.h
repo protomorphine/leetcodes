@@ -22,8 +22,17 @@ std::vector<int> TwoSum(const std::vector<int>& nums, int target);
 /// @return true - if x is palindrome, otherwise - false
 bool IsPalindrome(int x);
 
+/// @brief Convert string to integer
+/// @a https://leetcode.com/problems/string-to-integer-atoi/description/
+/// @param s string
+/// @return integer
 int MyAtoi(std::string& s);
 
+/// @brief Given a string containing digits from 2-9 inclusive,
+/// return all possible letter combinations that the number could represent. Return the answer in any order.
+/// @a https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+/// @param[in] digits string containing digits from 2-9 inclusive
+/// @return all possible letter combinations that the number
 std::vector<std::string> LetterCombinations(const std::string& digits);
 
 }  // namespace tasks
