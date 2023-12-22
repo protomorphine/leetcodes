@@ -7,6 +7,8 @@
 
 #include <string>
 #include <vector>
+
+#include "../data-structures/list_node.h"
 namespace tasks {
 
 /// @brief returns indices of nums elements, which sum is target
@@ -34,6 +36,13 @@ int MyAtoi(std::string& s);
 /// @param[in] digits string containing digits from 2-9 inclusive
 /// @return all possible letter combinations that the number
 std::vector<std::string> LetterCombinations(const std::string& digits);
+
+/// @brief Given the head of a linked list, remove the nth node from the end of the list and return its head.
+/// @a https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
+/// @param head head of linked list
+/// @param n position to delete from end
+/// @return head after deletion
+ds::ListNode* RemoveNthFromEnd(ds::ListNode* head, int n);
 
 }  // namespace tasks
 

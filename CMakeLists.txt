@@ -20,6 +20,9 @@ add_executable(leetcodes main.cpp
         test/string_to_integer_test.cpp
         src/letter_combination.cpp
         test/letter_combination_test.cpp
+        src/data-structures/list_node.h
+        src/remove_nth_from_end.cpp
+        test/remove_nth_from_end.cpp
 )
 
 target_link_libraries(
