@@ -23,6 +23,8 @@ add_executable(leetcodes main.cpp
         src/data-structures/list_node.h
         src/remove_nth_from_end.cpp
         test/remove_nth_from_end.cpp
+        src/longest_common_prefix.cpp
+        test/longest_common_prefix_test.cpp
 )
 
 target_link_libraries(

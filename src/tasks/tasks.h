@@ -44,6 +44,11 @@ std::vector<std::string> LetterCombinations(const std::string& digits);
 /// @return head after deletion
 ds::ListNode* RemoveNthFromEnd(ds::ListNode* head, int n);
 
+/// @brief  find the longest common prefix string amongst an array of strings.
+/// @a https://leetcode.com/problems/longest-common-prefix/description/
+/// @param strs array of strings
+/// @return longest common prefix string
+std::string LongestCommonPrefix(std::vector<std::string>& strs);
 }  // namespace tasks
 
 #endif  // LEETCODES_TASKS_H
