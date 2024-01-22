@@ -25,6 +25,8 @@ add_executable(leetcodes main.cpp
         test/remove_nth_from_end.cpp
         src/longest_common_prefix.cpp
         test/longest_common_prefix_test.cpp
+        src/set_mismatch.cpp
+        test/set_mismatch_test.cpp
 )
 
 target_link_libraries(

@@ -49,6 +49,12 @@ ds::ListNode* RemoveNthFromEnd(ds::ListNode* head, int n);
 /// @param strs array of strings
 /// @return longest common prefix string
 std::string LongestCommonPrefix(std::vector<std::string>& strs);
+
+/// @brief Find the number that occurs twice and the number that is missing and return them in the form of an array.
+/// @a https://leetcode.com/problems/set-mismatch/
+/// @param nums array.
+/// @return number that occurs twice and the number that is missing.
+std::vector<int> FindErrorNums(const std::vector<int>& nums);
 }  // namespace tasks
 
 #endif  // LEETCODES_TASKS_H
