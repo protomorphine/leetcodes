@@ -55,6 +55,12 @@ std::string LongestCommonPrefix(std::vector<std::string>& strs);
 /// @param nums array.
 /// @return number that occurs twice and the number that is missing.
 std::vector<int> FindErrorNums(const std::vector<int>& nums);
+
+/// @brief You are given an array of strings arr. A string s is formed by the concatenation of a subsequence of arr that has unique characters.
+/// @a https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/description/
+/// @param arr array with strings.
+/// @return maximum possible length of s.
+int MaxLength(const std::vector<std::string>& arr);
 }  // namespace tasks
 
 #endif  // LEETCODES_TASKS_H

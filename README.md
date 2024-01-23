@@ -16,3 +16,4 @@
 - 005 [Remove Nth From End](src/remove_nth_from_end.cpp)
 - 006 [Longest Common Prefix](src/longest_common_prefix.cpp)
 - 007 [Set Mismatch](src/set_mismatch.cpp)
+- 008 [Max Length Of Concatenated String](src/max_length_of_concatenated_string_with_unique_chars.cpp)

@@ -27,6 +27,8 @@ add_executable(leetcodes main.cpp
         test/longest_common_prefix_test.cpp
         src/set_mismatch.cpp
         test/set_mismatch_test.cpp
+        src/max_length_of_concatenated_string_with_unique_chars.cpp
+        test/max_length_of_concatenated_string_with_unique_chars_test.cpp
 )
 
 target_link_libraries(
