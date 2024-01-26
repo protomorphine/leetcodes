@@ -2,28 +2,28 @@
 // Created by D.Zaycev on 22.01.2024.
 //
 #include <numeric>
-#include <unordered_map>
+#include <unordered_set>
 
 #include "tasks/tasks.h"
 
 std::vector<int> tasks::FindErrorNums(const std::vector<int>& nums) {
     auto n = static_cast<int>(nums.size());
 
-    int kExpectedSum = n * (n + 1) / 2;
-    int kActualSum = std::reduce(nums.begin(), nums.end());
+    const int kExpectedSum = n * (n + 1) / 2;
+    int actual_sum = std::reduce(nums.begin(), nums.end());
 
-    std::unordered_map<int, int> map{};
+    std::unordered_set<int> set{};
     int duplicated = 0;
     for (auto num : nums) {
-        if (map.contains(num)) {
+        if (set.contains(num)) {
             duplicated = num;
             break;
         }
 
-        map.insert({num, 1});
+        set.insert(num);
     }
 
-    auto kMissingNum = kExpectedSum - (kActualSum - duplicated);
+    auto missing_num = kExpectedSum - (actual_sum - duplicated);
 
-    return {duplicated, kMissingNum};
+    return {duplicated, missing_num};
 }

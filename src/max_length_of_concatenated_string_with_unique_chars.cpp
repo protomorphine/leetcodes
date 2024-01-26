@@ -6,30 +6,30 @@
 #include "tasks/tasks.h"
 
 int tasks::MaxLength(const std::vector<std::string>& arr) {
-    int kMaxLength = 0;
+    int max_length = 0;
     std::vector<int> dp {0};
 
-    for (const auto & kItem : arr) {
+    for (const auto & string : arr) {
 
-        int kKnownLetters = 0; int kDuplicated = 0;
-        for (char k : kItem) {
-            int kMask = 1 << (26 - ((k - 'a') + 1));
-            kDuplicated |= kKnownLetters & kMask;
-            kKnownLetters |= kMask;
+        int known_letters = 0; int duplicated = 0;
+        for (char ch : string) {
+            int mask = 1 << (26 - ((ch - 'a') + 1));
+            duplicated |= known_letters & mask;
+            known_letters |= mask;
         }
 
-        if (kDuplicated > 0) {
+        if (duplicated > 0) {
             continue;
         }
 
         for (auto i = static_cast<int>(dp.size() - 1); i >= 0; --i) {
-            if ((dp[i] & kKnownLetters) == 0) {
-                dp.push_back(dp[i] | kKnownLetters);
+            if ((dp[i] & known_letters) == 0) {
+                dp.push_back(dp[i] | known_letters);
             }
 
-            kMaxLength = std::max(kMaxLength, std::popcount(static_cast<uint32_t>(dp.back())));
+            max_length = std::max(max_length, std::popcount(static_cast<uint32_t>(dp.back())));
         }
     }
 
-    return kMaxLength;
+    return max_length;
 }

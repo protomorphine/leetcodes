@@ -61,6 +61,13 @@ std::vector<int> FindErrorNums(const std::vector<int>& nums);
 /// @param arr array with strings.
 /// @return maximum possible length of s.
 int MaxLength(const std::vector<std::string>& arr);
+
+/// @brief Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.
+/// @a https://leetcode.com/problems/find-all-anagrams-in-a-string/description/
+/// @param s anagram container
+/// @param p anagram source
+/// @return array of indices from s
+std::vector<int> FindAnagrams(std::string_view s, std::string_view p);
 }  // namespace tasks
 
 #endif  // LEETCODES_TASKS_H

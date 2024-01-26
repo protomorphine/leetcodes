@@ -7,7 +7,7 @@
 #include "tasks/tasks.h"
 
 std::vector<std::string> tasks::LetterCombinations(const std::string& digits){
-    static const std::unordered_map<char, std::vector<std::string>> map = {
+    static const std::unordered_map<char, std::vector<std::string>> kMap = {
         {'2', {"a", "b", "c"}}, {'3', {"d", "e", "f"}},
         {'4', {"g", "h", "i"}}, {'5', {"j", "k", "l"}},
         {'6', {"m", "n", "o"}}, {'7', {"p", "q", "r", "s"}},
@@ -19,12 +19,12 @@ std::vector<std::string> tasks::LetterCombinations(const std::string& digits){
     }
 
     if (digits.size() == 1) {
-        return map.at(digits[0]);
+        return kMap.at(digits[0]);
     }
 
     std::vector<std::string> res{};
 
-    for (auto const& letters = map.at(digits[0]); const auto& letter : letters) {
+    for (auto const& letters = kMap.at(digits[0]); const auto& letter : letters) {
         std::vector<std::string> others = LetterCombinations(digits.substr(1));
 
         std::ranges::transform(others.begin(),others.end(),
