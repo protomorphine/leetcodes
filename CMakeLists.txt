@@ -9,29 +9,13 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(cmake/fetch_google_test.cmake)
+include(cmake/task.cmake)
 
-add_executable(leetcodes main.cpp
-        src/tasks/tasks.h
-        src/two_sum.cpp
-        test/two_sum_test.cpp
-        src/is_palindrome.cpp
-        test/is_palindrome_test.cpp
-        src/string_to_integer.cpp
-        test/string_to_integer_test.cpp
-        src/letter_combination.cpp
-        test/letter_combination_test.cpp
-        src/data-structures/list_node.h
-        src/remove_nth_from_end.cpp
-        test/remove_nth_from_end.cpp
-        src/longest_common_prefix.cpp
-        test/longest_common_prefix_test.cpp
-        src/set_mismatch.cpp
-        test/set_mismatch_test.cpp
-        src/max_length_of_concatenated_string_with_unique_chars.cpp
-        test/max_length_of_concatenated_string_with_unique_chars_test.cpp
-)
-
-target_link_libraries(
-        leetcodes
-        GTest::gtest_main
-)
+add_task(two_sum)
+add_task(is_palindrome)
+add_task(string_to_integer)
+add_task(letter_combination)
+add_task(remove_nth_from_end)
+add_task(longest_common_prefix)
+add_task(set_mismatch)
+add_task(max_length_of_concatenated_string_with_unique_chars)
