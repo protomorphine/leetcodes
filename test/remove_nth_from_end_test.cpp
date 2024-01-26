@@ -16,13 +16,7 @@ std::vector<int> ListToVector(ds::ListNode const* head) {
 }
 
 TEST(RemoveNthFromEndTest, Positive) {
-    ds::ListNode* node = ds::ListNode::Create(1, 2, 3, 4, 5);
-
-    ASSERT_EQ(ListToVector(tasks::RemoveNthFromEnd(node, 2)), (std::vector<int>{1, 2, 3, 5}));
-
-    node = ds::ListNode::Create(1);
-    ASSERT_EQ(ListToVector(tasks::RemoveNthFromEnd(node, 1)), (std::vector<int>{}));
-
-    node = ds::ListNode::Create(1, 2);
-    ASSERT_EQ(ListToVector(tasks::RemoveNthFromEnd(node, 1)), (std::vector<int>{1}));
+    ASSERT_EQ(ListToVector(tasks::RemoveNthFromEnd(ds::ListNode::Create(1, 2, 3, 4, 5), 2)), (std::vector<int>{1, 2, 3, 5}));
+    ASSERT_EQ(ListToVector(tasks::RemoveNthFromEnd(ds::ListNode::Create(1), 1)), (std::vector<int>{}));
+    ASSERT_EQ(ListToVector(tasks::RemoveNthFromEnd(ds::ListNode::Create(1, 2), 1)), (std::vector<int>{1}));
 }

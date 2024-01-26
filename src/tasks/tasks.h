@@ -68,6 +68,11 @@ int MaxLength(const std::vector<std::string>& arr);
 /// @param p anagram source
 /// @return array of indices from s
 std::vector<int> FindAnagrams(std::string_view s, std::string_view p);
+
+/// @brief Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+/// @param nums array of numbers
+/// @return number in the range that is missing from the array
+int MissingNumber(std::vector<int>& nums);
 }  // namespace tasks
 
 #endif  // LEETCODES_TASKS_H
