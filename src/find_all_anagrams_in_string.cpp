@@ -3,7 +3,6 @@
 //
 #include "tasks/tasks.h"
 
-namespace internal {
 std::vector<int> CharactersFrequencies(std::string_view str) {
     std::vector<int> frequencies(26);
 
@@ -13,13 +12,12 @@ std::vector<int> CharactersFrequencies(std::string_view str) {
 
     return frequencies;
 }
-}  // namespace internal
 
 std::vector<int> tasks::FindAnagrams(std::string_view s, std::string_view p) {
     size_t const kWindowSize = p.size();
 
     std::vector<int> anagram_indices{};
-    std::vector<int> reference_frequencies = internal::CharactersFrequencies(p);
+    std::vector<int> reference_frequencies = CharactersFrequencies(p);
 
     for (size_t i = 0; i < s.size(); ++i) {
         std::string_view current_substring = s.substr(i, kWindowSize);
@@ -28,7 +26,7 @@ std::vector<int> tasks::FindAnagrams(std::string_view s, std::string_view p) {
             continue;
         }
 
-        if (reference_frequencies == internal::CharactersFrequencies(current_substring)) {
+        if (reference_frequencies == CharactersFrequencies(current_substring)) {
             anagram_indices.push_back(static_cast<int>(i));
         }
     }

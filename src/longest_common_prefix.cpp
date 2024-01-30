@@ -6,8 +6,8 @@
 
 #include "tasks/tasks.h"
 
-namespace internal {
-std::string LongestCommonPrefix(std::string_view s1, std::string_view s2) {
+std::string LongestPrefixForTwoStrings(std::string_view s1,
+                                       std::string_view s2) {
     auto first = s1.begin();
     auto second = s2.begin();
 
@@ -20,7 +20,6 @@ std::string LongestCommonPrefix(std::string_view s1, std::string_view s2) {
 
     return prefix;
 }
-}  // namespace internal
 
 std::string tasks::LongestCommonPrefix(std::vector<std::string>& strs) {
     if (strs.empty()) {
@@ -31,5 +30,5 @@ std::string tasks::LongestCommonPrefix(std::vector<std::string>& strs) {
     }
 
     std::ranges::sort(strs.begin(), strs.end());
-    return internal::LongestCommonPrefix(strs.front(), strs.back());
+    return LongestPrefixForTwoStrings(strs.front(), strs.back());
 }

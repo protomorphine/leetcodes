@@ -14,16 +14,15 @@ struct ListNode {
     explicit ListNode(int x) : val(x) {}
     ListNode(int x, ListNode* next) : val(x), next(next) {}
 
-    static ListNode* Create(std::same_as<int> auto first, std::same_as<int> auto... ints) {
+    [[nodiscard]] static ListNode* Create(std::same_as<int> auto first,
+                            std::same_as<int> auto... ints) {
         auto head = new ListNode(first);
         auto curr = head;
 
-        auto create_and_go_next = [&curr](std::same_as<int> auto arg) {
+        ([&curr](std::same_as<int> auto arg) {
             curr->next = new ListNode(arg);
             curr = curr->next;
-        };
-
-        ((create_and_go_next(ints)), ...);
+        }(ints), ...);
 
         return head;
     }

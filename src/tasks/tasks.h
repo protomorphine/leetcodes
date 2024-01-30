@@ -73,6 +73,12 @@ std::vector<int> FindAnagrams(std::string_view s, std::string_view p);
 /// @param nums array of numbers
 /// @return number in the range that is missing from the array
 int MissingNumber(std::vector<int>& nums);
+
+/// @brief Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+/// @a https://leetcode.com/problems/single-number/description/
+/// @param nums array of integer
+/// @return not duplicated number from array
+int SingleNumber(const std::vector<int>& nums);
 }  // namespace tasks
 
 #endif  // LEETCODES_TASKS_H

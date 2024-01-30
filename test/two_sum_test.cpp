@@ -15,9 +15,9 @@ int GetSum(const std::vector<int>& indices, const std::vector<int>& source) {
 }
 
 TEST(TwoSumTest, PositiveTest) {
-    std::vector<int> nums1 = {2, 7, 11, 15};
-    std::vector<int> nums2 = {3, 2, 4};
-    std::vector<int> nums3 = {3, 3};
+    std::vector nums1 {2, 7, 11, 15};
+    std::vector nums2 {3, 2, 4};
+    std::vector nums3 {3, 3};
 
     int target1 = 9;
     int target2 = 6;
@@ -29,8 +29,8 @@ TEST(TwoSumTest, PositiveTest) {
 }
 
 TEST(TwoSumTest, NegativeTest) {
-    std::vector<int> nums1 = {2, 7, 11, 15};
-    std::vector<int> nums2 = {3, 5};
+    std::vector nums1 {2, 7, 11, 15};
+    std::vector nums2 {3, 5};
 
     int target1 = 25;
     int target2 = 10;

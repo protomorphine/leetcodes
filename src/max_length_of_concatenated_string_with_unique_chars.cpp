@@ -7,11 +7,11 @@
 
 int tasks::MaxLength(const std::vector<std::string>& arr) {
     int max_length = 0;
-    std::vector<int> dp {0};
+    std::vector<int> dp{0};
 
-    for (const auto & string : arr) {
-
-        int known_letters = 0; int duplicated = 0;
+    for (const auto& string : arr) {
+        int known_letters = 0;
+        int duplicated = 0;
         for (char ch : string) {
             int mask = 1 << (26 - ((ch - 'a') + 1));
             duplicated |= known_letters & mask;
@@ -27,7 +27,8 @@ int tasks::MaxLength(const std::vector<std::string>& arr) {
                 dp.push_back(dp[i] | known_letters);
             }
 
-            max_length = std::max(max_length, std::popcount(static_cast<uint32_t>(dp.back())));
+            max_length = std::max(
+                max_length, std::popcount(static_cast<uint32_t>(dp.back())));
         }
     }
 

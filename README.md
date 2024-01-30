@@ -19,3 +19,4 @@
 - 008 [Max Length Of Concatenated String](src/max_length_of_concatenated_string_with_unique_chars.cpp)
 - 009 [Find All Anagrams in a String](src/find_all_anagrams_in_string.cpp)
 - 010 [Missing Num](src/missing_number.cpp)
+- 011 [Single Number](src/single_number.cpp)

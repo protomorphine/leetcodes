@@ -6,7 +6,7 @@
 
 #include "tasks/tasks.h"
 
-std::vector<std::string> tasks::LetterCombinations(const std::string& digits){
+std::vector<std::string> tasks::LetterCombinations(const std::string& digits) {
     static const std::unordered_map<char, std::vector<std::string>> kMap = {
         {'2', {"a", "b", "c"}}, {'3', {"d", "e", "f"}},
         {'4', {"g", "h", "i"}}, {'5', {"j", "k", "l"}},
@@ -24,11 +24,13 @@ std::vector<std::string> tasks::LetterCombinations(const std::string& digits){
 
     std::vector<std::string> res{};
 
-    for (auto const& letters = kMap.at(digits[0]); const auto& letter : letters) {
+    for (auto const& letters = kMap.at(digits[0]);
+         const auto& letter : letters) {
         std::vector<std::string> others = LetterCombinations(digits.substr(1));
 
-        std::ranges::transform(others.begin(),others.end(),
-            std::back_inserter(res),[&letter](std::string const& other){ return letter + other; });
+        std::ranges::transform(
+            others.begin(), others.end(), std::back_inserter(res),
+            [&letter](std::string const& other) { return letter + other; });
     }
 
     return res;
