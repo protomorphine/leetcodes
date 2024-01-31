@@ -79,6 +79,8 @@ int MissingNumber(std::vector<int>& nums);
 /// @param nums array of integer
 /// @return not duplicated number from array
 int SingleNumber(const std::vector<int>& nums);
+
+std::vector<std::vector<std::string>> GroupAnagrams(const std::vector<std::string>& strs);
 }  // namespace tasks
 
 #endif  // LEETCODES_TASKS_H
