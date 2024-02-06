@@ -6,11 +6,11 @@
 #include "../src/tasks/tasks.h"
 
 TEST(IsPalindromeTest, PositiveTests){
-    ASSERT_EQ(tasks::IsPalindrome(121), true);
-    ASSERT_EQ(tasks::IsPalindrome(9889), true);
+    ASSERT_TRUE(tasks::IsPalindrome(121));
+    ASSERT_TRUE(tasks::IsPalindrome(9889));
 }
 
 TEST(IsPalindromeTest, NegativeTests){
-    ASSERT_EQ(tasks::IsPalindrome(-121), false);
-    ASSERT_EQ(tasks::IsPalindrome(10), false);
+    ASSERT_FALSE(tasks::IsPalindrome(-121));
+    ASSERT_FALSE(tasks::IsPalindrome(10));
 }
