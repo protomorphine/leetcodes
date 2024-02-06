@@ -81,6 +81,12 @@ int MissingNumber(std::vector<int>& nums);
 int SingleNumber(const std::vector<int>& nums);
 
 std::vector<std::vector<std::string>> GroupAnagrams(const std::vector<std::string>& strs);
+
+/// @brief Given a string s, find the length of the longest substring without repeating characters.
+/// @a https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+/// @param s string
+/// @return max length of substring, without repeating characters
+int LengthOfLongestSubstring(std::string_view s);
 }  // namespace tasks
 
 #endif  // LEETCODES_TASKS_H
